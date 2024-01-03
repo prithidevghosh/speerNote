@@ -25,6 +25,11 @@ app.use(express.json());
 connectDb();
 
 // Routes setup
+app.get("/", (req, res) => {
+  return res.status(200).json({
+    message: "Speer notes backend api instance",
+  });
+});
 app.use("/api", routesFolder);
 
 // Start the Express application on port 8000
