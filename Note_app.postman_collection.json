@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "eb988b21-6012-4a4a-8adc-83ba17b7dd0c",
+		"name": "Note_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26116850"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ghosh1@email.com\",\r\n    \"password\":\"ghosh1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/auth/login",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTk1Y2VlNGQ1MTRjYzVlOTcyMDcwN2IiLCJuYW1lIjoiZ2hvc2gxIiwiZW1haWwiOiJnaG9zaDFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkOTFjS2tkUWVZdEtjMHc3RDhJMGN0dWIyc2p3ZmV3T296TnEwc012cEpoZ2VqanhsazljM3EiLCJjcmVhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJfX3YiOjAsImlhdCI6MTcwNDMxNjcwNywiZXhwIjoxNzA0MzE3NzA3fQ.WRzsqjrr7ADw51ORaN6NW8vfB3vpnACC7N1Eg4TiMTg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/notes",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTk1Y2VlNGQ1MTRjYzVlOTcyMDcwN2IiLCJuYW1lIjoiZ2hvc2gxIiwiZW1haWwiOiJnaG9zaDFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkOTFjS2tkUWVZdEtjMHc3RDhJMGN0dWIyc2p3ZmV3T296TnEwc012cEpoZ2VqanhsazljM3EiLCJjcmVhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJfX3YiOjAsImlhdCI6MTcwNDMxNzg5NywiZXhwIjoxNzA0MzE4ODk3fQ.KbHIlA1TeT2qjRDTpMM6aSmorzH2imvH9uHiC_Ojivg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTk1OGY3MzkyYzA4OGVjY2ExMjBmMmQiLCJuYW1lIjoicGFwYW4xIiwiZW1haWwiOiJwYXBhbjFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkRWVaOHVQenBuYXFvYjRGYTNiSWR3T3IyN2ZTb251QUlTakV2djNmT2V4RVpYcUpKb24yakMiLCJjcmVhdGVkQXQiOiIyMDI0LTAxLTAzVDE2OjQ2OjQzLjc1MloiLCJ1cGRhdGVkQXQiOiIyMDI0LTAxLTAzVDE2OjQ2OjQzLjc1MloiLCJfX3YiOjAsImlhdCI6MTcwNDMxMzcxNCwiZXhwIjoxNzA0MzE0NzE0fQ.ZZ-KRXXYHpmf5YLvK7jokhWnQwE38euKrqbRBAe2ioc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"this is my fourth note from ghosh1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/notes",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTk1Y2VlNGQ1MTRjYzVlOTcyMDcwN2IiLCJuYW1lIjoiZ2hvc2gxIiwiZW1haWwiOiJnaG9zaDFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkOTFjS2tkUWVZdEtjMHc3RDhJMGN0dWIyc2p3ZmV3T296TnEwc012cEpoZ2VqanhsazljM3EiLCJjcmVhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJfX3YiOjAsImlhdCI6MTcwNDMxNzg5NywiZXhwIjoxNzA0MzE4ODk3fQ.KbHIlA1TeT2qjRDTpMM6aSmorzH2imvH9uHiC_Ojivg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTk1OGY3MzkyYzA4OGVjY2ExMjBmMmQiLCJuYW1lIjoicGFwYW4xIiwiZW1haWwiOiJwYXBhbjFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkRWVaOHVQenBuYXFvYjRGYTNiSWR3T3IyN2ZTb251QUlTakV2djNmT2V4RVpYcUpKb24yakMiLCJjcmVhdGVkQXQiOiIyMDI0LTAxLTAzVDE2OjQ2OjQzLjc1MloiLCJ1cGRhdGVkQXQiOiIyMDI0LTAxLTAzVDE2OjQ2OjQzLjc1MloiLCJfX3YiOjAsImlhdCI6MTcwNDMxNDkyMiwiZXhwIjoxNzA0MzE1OTIyfQ.Iwf6juneTNtOCvyNLIHXXTtA6pcVMfsCn-E-6t1Oxho"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/search?q=fourth",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "fourth"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ghosh3\",\r\n    \"email\":\"ghosh3@email.com\",\r\n    \"password\":\"ghosh3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/auth/signup",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "share note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTk1Y2VlNGQ1MTRjYzVlOTcyMDcwN2IiLCJuYW1lIjoiZ2hvc2gxIiwiZW1haWwiOiJnaG9zaDFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkOTFjS2tkUWVZdEtjMHc3RDhJMGN0dWIyc2p3ZmV3T296TnEwc012cEpoZ2VqanhsazljM3EiLCJjcmVhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJfX3YiOjAsImlhdCI6MTcwNDMxNjcwNywiZXhwIjoxNzA0MzE3NzA3fQ.WRzsqjrr7ADw51ORaN6NW8vfB3vpnACC7N1Eg4TiMTg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/notes/share/6595cef4d514cc5e9720707d/6595cf4ed514cc5e97207085",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"notes",
+						"share",
+						"6595cef4d514cc5e9720707d",
+						"6595cf4ed514cc5e97207085"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTk1Y2VlNGQ1MTRjYzVlOTcyMDcwN2IiLCJuYW1lIjoiZ2hvc2gxIiwiZW1haWwiOiJnaG9zaDFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkOTFjS2tkUWVZdEtjMHc3RDhJMGN0dWIyc2p3ZmV3T296TnEwc012cEpoZ2VqanhsazljM3EiLCJjcmVhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJfX3YiOjAsImlhdCI6MTcwNDMxNjcwNywiZXhwIjoxNzA0MzE3NzA3fQ.WRzsqjrr7ADw51ORaN6NW8vfB3vpnACC7N1Eg4TiMTg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/notes/delete/6595cf4ed514cc5e97207085",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"notes",
+						"delete",
+						"6595cf4ed514cc5e97207085"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTk1Y2VlNGQ1MTRjYzVlOTcyMDcwN2IiLCJuYW1lIjoiZ2hvc2gxIiwiZW1haWwiOiJnaG9zaDFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkOTFjS2tkUWVZdEtjMHc3RDhJMGN0dWIyc2p3ZmV3T296TnEwc012cEpoZ2VqanhsazljM3EiLCJjcmVhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTAxLTAzVDIxOjE3OjI0LjU5M1oiLCJfX3YiOjAsImlhdCI6MTcwNDMxNjcwNywiZXhwIjoxNzA0MzE3NzA3fQ.WRzsqjrr7ADw51ORaN6NW8vfB3vpnACC7N1Eg4TiMTg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"this is my updated text\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/notes/update/6595cf5cd514cc5e9720708b",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"notes",
+						"update",
+						"6595cf5cd514cc5e9720708b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
