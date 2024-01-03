@@ -87,30 +87,30 @@ curl --location 'https://speer-note.vercel.app/api/auth/login' \
 Here is a list of features added to the Speer Note application:
 <ol>
 <li>User Authentication:</li>
-
-Users can create a new account (/auth/signup).
-Users can log in to their account (/auth/login).
+<ul>
+<li>Users can create a new account (/auth/signup).</li>
+<li>Users can log in to their account (/auth/login).</li>
+</ul>
 <li>Note Management:</li>
-
-Users can retrieve their notes (/notes - GET).
-Users can create a new note (/notes - POST).
-Users can delete a note (/notes/delete/:noteid - DELETE).
-Users can update a note (/notes/update/:noteid - PUT).
-Users can share a note with another user (/notes/share/:shareduserid/:noteid - POST).
+<ul>
+<li>Users can retrieve their notes (/notes - GET).</li>
+<li>Users can create a new note (/notes - POST).</li>
+<li>Users can delete a note (/notes/delete/:noteid - DELETE).</li>
+<li>Users can update a note (/notes/update/:noteid - PUT).</li>
+<li>Users can share a note with another user (/notes/share/:shareduserid/:noteid - POST).</li>
+</ul>
 <li>Search Functionality:</li>
-
-Users can search for notes based on keywords (/search?q=your_query).
-<li>Additional Endpoints:</li>
-
-/auth: Handles authentication-related routes.
-/notes: Authenticated routes for managing notes.
-/api/flights/tariff/{source}/{destination}/{date}: Find flights between two airports.
+<ul>
+<li>Users can search for notes based on keywords (/search?q=your_query).</li>
+</ul>
 <li>Middleware:</li>
-
-Passport authentication middleware is used to secure routes.
+<ul>
+<li>Passport authentication middleware is used to secure routes.</li>
+</ul>
 <li>Database:</li>
-
-MongoDB is used as the database, and Mongoose is the ODM.
+<ul>
+<li>MongoDB is used as the database, and Mongoose is the ODM.</li>
+</ul>
 <li>Token-based Authentication:</li>
 
 JSON Web Tokens (JWT) are used for secure user authentication.
