@@ -112,13 +112,15 @@ Here is a list of features added to the Speer Note application:
 <li>MongoDB is used as the database, and Mongoose is the ODM.</li>
 </ul>
 <li>Token-based Authentication:</li>
-
-JSON Web Tokens (JWT) are used for secure user authentication.
-
+<ul>
+<li>JSON Web Tokens (JWT) are used for secure user authentication.</li>
+</ul>
 <li>Environment Variables:</li>
-
-Environment variables are used to store sensitive information like database connection URI and token secret.
+<ul>
+<li>Environment variables are used to store sensitive information like database connection URI and token secret.</li>
+</ul>
 <li>Deployed on Vercel:</li>
-
-The application is deployed on Vercel, and the base production URL is https://speer-note.vercel.app/.
+<ul>
+<li>The application is deployed on Vercel, and the base production URL is https://speer-note.vercel.app/.</li>
+</ul>
 </ol>
