@@ -59,7 +59,7 @@ TOKEN_SECRET = "your own token secret"
 | --- | --- | --- |
 | `/auth/signup` | POST | User Registration (Sign-Up) |
 | `/auth/login` | POST | User Authentication (Sign-In) |
-| `/notes` | GET | Retrieve Notes |
+| `/notes` | GET | Retrieve Notes |:lock:
 | `/notes` | POST | Create Note |
 | `/notes/delete/:noteid` | DELETE | Delete Note |
 | `/notes/update/:noteid` | PUT | Update Note |
