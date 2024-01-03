@@ -85,44 +85,40 @@ curl --location 'https://speer-note.vercel.app/api/auth/login' \
 
 
 Here is a list of features added to the Speer Note application:
-
-User Authentication:
+<ol>
+<li>User Authentication:</li>
 
 Users can create a new account (/auth/signup).
 Users can log in to their account (/auth/login).
-Note Management:
+<li>Note Management:</li>
 
 Users can retrieve their notes (/notes - GET).
 Users can create a new note (/notes - POST).
 Users can delete a note (/notes/delete/:noteid - DELETE).
 Users can update a note (/notes/update/:noteid - PUT).
 Users can share a note with another user (/notes/share/:shareduserid/:noteid - POST).
-Search Functionality:
+<li>Search Functionality:</li>
 
 Users can search for notes based on keywords (/search?q=your_query).
-Additional Endpoints:
+<li>Additional Endpoints:</li>
 
 /auth: Handles authentication-related routes.
 /notes: Authenticated routes for managing notes.
 /api/flights/tariff/{source}/{destination}/{date}: Find flights between two airports.
-Middleware:
+<li>Middleware:</li>
 
 Passport authentication middleware is used to secure routes.
-Database:
+<li>Database:</li>
 
 MongoDB is used as the database, and Mongoose is the ODM.
-Token-based Authentication:
+<li>Token-based Authentication:</li>
 
 JSON Web Tokens (JWT) are used for secure user authentication.
-Unit Testing:
 
-Unit tests and integration tests are implemented to ensure code reliability.
-Logging:
-
-Pino is used for logging to capture application events.
-Environment Variables:
+<li>Environment Variables:</li>
 
 Environment variables are used to store sensitive information like database connection URI and token secret.
-Deployed on Vercel:
+<li>Deployed on Vercel:</li>
 
 The application is deployed on Vercel, and the base production URL is https://speer-note.vercel.app/.
+</ol>
