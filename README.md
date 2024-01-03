@@ -1,12 +1,35 @@
-# speerNote
 Speer Note API
-Welcome to the Speer Note API! This API is designed to handle various note-related operations, including authentication, note management, and keyword-based note searching. Below is a comprehensive guide on how to use the API, along with key features and endpoints.
 
+The Speer Note API is a powerful tool for managing your notes. It provides various endpoints for user authentication, note management, and keyword-based note searching. Below, you'll find a detailed guide on how to interact with the API, along with key features and example requests.
+
+Table of Contents
+Base URL
+Authentication
+Endpoints
+Authentication Routes
+1. User Registration (Sign-Up)
+2. User Authentication (Sign-In)
+Note Routes
+1. Get Notes
+2. Create Note
+3. Delete Note
+4. Update Note
+5. Share Note
+6. Search Notes
+Example Usage
+Retrieve Notes
+Create Note
+Delete Note
+Update Note
+Share Note
+Search Notes
+Contributing
+License
 Base URL
 The base URL for the production environment is https://speer-note.vercel.app/api.
 
 Authentication
-The API uses JSON Web Tokens (JWT) for authentication. To access authenticated routes, you need to include a valid JWT in the Authorization header of your requests.
+The API uses JSON Web Tokens (JWT) for authentication. To access authenticated routes, include a valid JWT in the Authorization header of your requests.
 
 Endpoints
 Authentication Routes
@@ -138,7 +161,7 @@ Copy code
   "message": "Note shared successfully."
 }
 6. Search Notes
-Endpoint: /search?q=:query
+Endpoint: /search?q=your_query
 Method: GET
 Authorization Header: Bearer JWT_ACCESS_TOKEN
 Response:
@@ -147,7 +170,7 @@ Copy code
 {
   "success": true,
   "message": "Search results retrieved successfully.",
-  "data": [/* Array of notes matching the search query */]
+  "data": [/* Array of search results */]
 }
 Example Usage
 Retrieve Notes
@@ -175,3 +198,9 @@ bash
 Copy code
 curl -X GET https://speer-note.vercel.app/api/search?q=your_query -H "Authorization: Bearer JWT_ACCESS_TOKEN"
 Feel free to explore more functionalities and tailor them to your needs! If you have any questions or issues, please reach out to us. Happy noting!
+
+Contributing
+To contribute to the Speer Note API, please follow our contribution guidelines.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
