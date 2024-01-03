@@ -70,3 +70,15 @@ TOKEN_SECRET = "your own token secret"
 | `/search?q=your_query` :lock:| GET | Search Notes |
 
 
+<h3><i>Example prod curl</i></h3>
+
+```bash
+
+curl --location 'https://speer-note.vercel.app/api/auth/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email":"ghosh1@email.com",
+    "password":"ghosh1"
+}'
+
+```
