@@ -13,15 +13,18 @@
 <li>MongoDB v4.4 or higher</li>
 </ul>
 
-Authentication
+### Authentication
 The API uses JSON Web Tokens (JWT) for authentication. To access authenticated routes, include a valid JWT in the Authorization header of your requests.
+The endpoints with a :lock: at end, signifies a protected route
 
-<h3><i>Backend Installation</i></h3>
+*steps to locally configure and run this app*
+
 
 ## Clone the repo
 ```bash
 
-git clone https://github.com/prithidevghosh/FlySimple.git
+git clone https://github.com/prithidevghosh/speerNote.git
+
 
 ```
 ## Install the required packages
@@ -60,10 +63,10 @@ TOKEN_SECRET = "your own token secret"
 | `/auth/signup` | POST | User Registration (Sign-Up) |
 | `/auth/login` | POST | User Authentication (Sign-In) |
 | `/notes` :lock:| GET | Retrieve Notes |
-| `/notes` | POST | Create Note |
-| `/notes/delete/:noteid` | DELETE | Delete Note |
-| `/notes/update/:noteid` | PUT | Update Note |
-| `/notes/share/:shareduserid/:noteid` | POST | Share Note |
-| `/search?q=your_query` | GET | Search Notes |
+| `/notes` :lock:| POST | Create Note |
+| `/notes/delete/:noteid` :lock:| DELETE | Delete Note |
+| `/notes/update/:noteid` :lock:| PUT | Update Note |
+| `/notes/share/:shareduserid/:noteid` :lock:| POST | Share Note |
+| `/search?q=your_query` :lock:| GET | Search Notes |
 
 
